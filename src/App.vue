@@ -3,9 +3,7 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <div
-    class="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 flex flex-col"
-  >
+  <div class="min-h-screen bg-linear-to-br from-slate-950 via-slate-900 to-slate-800 flex flex-col">
     <!-- Navigation -->
     <nav class="border-b border-slate-800 bg-slate-900/50 backdrop-blur-sm">
       <div class="max-w-6xl mx-auto px-6 py-4">
@@ -43,7 +41,7 @@ import { RouterLink, RouterView } from "vue-router";
     </nav>
 
     <!-- Main Content -->
-    <main class="flex-grow max-w-6xl w-full mx-auto px-6 py-12">
+    <main class="grow max-w-6xl w-full mx-auto px-6 py-12">
       <RouterView />
     </main>
 

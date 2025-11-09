@@ -100,7 +100,7 @@ const nextStatus = computed(() => {
       </div>
 
       <!-- Anecdote -->
-      <div class="bg-gradient-to-r from-purple-900/50 to-pink-900/50 backdrop-blur border border-purple-700 rounded-xl p-6">
+      <div class="bg-linear-to-r from-purple-900/50 to-pink-900/50 backdrop-blur border border-purple-700 rounded-xl p-6">
         <h3 class="text-lg font-semibold text-white mb-3 flex items-center gap-2">
           <span>🎉</span>
           <span>Le savais-tu ?</span>
