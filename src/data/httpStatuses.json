@@ -1,0 +1,74 @@
+[
+  {
+    "id": 200,
+    "title": "200 OK",
+    "description": "La requête a réussi ! Tout s'est bien passé et le serveur renvoie les données demandées.",
+    "usage": "C'est le status code le plus courant. Tu le vois à chaque fois qu'une page se charge correctement.",
+    "commonError": "Parfois les devs renvoient un 200 même quand il y a une erreur dans le JSON... skill issue majeur 🤡",
+    "funFact": "C'est tellement banal qu'on ne le remarque même plus dans les dev tools !",
+    "image": "200.webp"
+  },
+  {
+    "id": 204,
+    "title": "204 Aucun contenu",
+    "description": "La requête a réussi mais il n'y a rien à renvoyer. Succès silencieux.",
+    "usage": "Suppression d'une ressource, mise à jour qui ne renvoie rien, opération réussie sans données.",
+    "commonError": "Oublier que le 204 ne doit PAS avoir de body. Si tu mets un body, c'est contre les specs !",
+    "funFact": "Super pratique pour les APIs REST, mais souvent oublié par les juniors qui mettent du 200 partout.",
+    "image": "204.webp"
+  },
+  {
+    "id": 401,
+    "title": "401 Non authentifié",
+    "description": "Qui es-tu ? Le serveur ne te reconnaît pas et tu dois t'identifier avant d'accéder à cette ressource.",
+    "usage": "Utilisateur pas connecté, token JWT expiré, credentials invalides ou absents.",
+    "commonError": "Confondre 401 (pas connecté) avec 403 (connecté mais pas les droits). Le 401 dit 'Qui es-tu?', le 403 dit 'Je te connais mais non.'",
+    "funFact": "Souvent accompagné d'un header WWW-Authenticate qui dit au client comment s'authentifier. Mais personne ne le lit vraiment 😅",
+    "image": "401.webp"
+  },
+  {
+    "id": 403,
+    "title": "403 Interdit",
+    "description": "Tu n'as pas la permission d'accéder à cette ressource. Le serveur te connaît, mais il te dit non.",
+    "usage": "Accès admin requis, token invalide, ou t'essaies d'accéder à un truc qui n'est pas pour toi.",
+    "commonError": "Confondre 403 (pas autorisé) avec 401 (pas authentifié). C'est pas pareil les amis !",
+    "funFact": "La différence avec le 401 : ici le serveur dit 'Je sais qui tu es, mais tu passes pas.'",
+    "image": "403.webp"
+  },
+  {
+    "id": 404,
+    "title": "404 Introuvable",
+    "description": "La ressource demandée n'existe pas. Le serveur ne trouve pas ce que tu cherches.",
+    "usage": "Page supprimée, URL mal tapée, ou le dev a oublié de créer la route (oops).",
+    "commonError": "Oublier de gérer les 404 et laisser une page blanche = expérience utilisateur catastrophique.",
+    "funFact": "Le code d'erreur le plus célèbre du web ! Même ta grand-mère connaît le 404.",
+    "image": "404.webp"
+  },
+  {
+    "id": 418,
+    "title": "418 Je suis une théière",
+    "description": "Je suis une théière. Oui, vraiment. C'est un easter egg du protocole HTTP créé pour le poisson d'avril 1998.",
+    "usage": "Absolument aucune utilisation pratique. Mais c'est drôle fr fr.",
+    "commonError": "Certains devs l'utilisent pour signaler qu'ils refusent de traiter une requête idiote.",
+    "funFact": "Google et d'autres sites répondent vraiment avec ce code si tu fais la requête !",
+    "image": "418.webp"
+  },
+  {
+    "id": 422,
+    "title": "422 Entité non traitable",
+    "description": "Le serveur comprend ta requête, mais il ne peut pas la traiter à cause d'erreurs sémantiques.",
+    "usage": "Validation de formulaire échouée, données au bon format mais contenu invalide (ex: email déjà utilisé, âge négatif).",
+    "commonError": "Utiliser un 400 Bad Request au lieu d'un 422 quand c'est une erreur de logique métier. Le 400 c'est pour les erreurs de syntaxe !",
+    "funFact": "Super populaire dans les APIs REST modernes, surtout Laravel et Rails qui l'utilisent pour la validation. Les anciens devs utilisaient juste du 400 pour tout 🤷",
+    "image": "422.webp"
+  },
+  {
+    "id": 500,
+    "title": "500 Erreur interne du serveur",
+    "description": "Le serveur a planté. Quelque chose s'est cassé côté backend et personne ne sait quoi exactement.",
+    "usage": "Bug dans le code, base de données morte, exception non gérée... bref, c'est le chaos.",
+    "commonError": "Ne jamais afficher les détails de l'erreur en production ! C'est une faille de sécurité.",
+    "funFact": "Le cauchemar de tout dev backend. Si tu vois ça en prod à 3h du mat, prépare le café ☕",
+    "image": "500.webp"
+  }
+]
